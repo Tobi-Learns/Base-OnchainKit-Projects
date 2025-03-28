@@ -1,76 +1,63 @@
-# 🚀 Getting Started with Base
+# 🛠️ OnchainKit Projects by Base Contributors
 
-Welcome to the Base Starter Kit! This kit includes the necessary accounts and tools you'll need for the Base Project Examples.
+Welcome to a growing collection of open-source, community-driven projects built with [Base's OnchainKit](https://onchainkit.xyz). This repo serves as your launchpad for learning, building, and experimenting with the powerful tools that bring onchain actions to life — right from your frontend.
 
-
-## 🖥️ Machine Profile
-
-We recommend using a machine running **Linux** or **MacOS** for the best developer experience.
-
-- **Supported OS**: Linux, MacOS, Windows
-- **Browser**: Chrome
+Whether you're just getting started with OnchainKit or looking for real-world examples to fork and remix, you're in the right place.
 
 
-## 🔧 Accounts and Tooling
+## 💡 What's Inside
 
-Before getting started, make sure you have accounts and tools set up on the following platforms:
+Each subfolder in this repository is a standalone project designed to showcase a specific use case or pattern using OnchainKit. Think of it as your Swiss Army knife for building onchain-enabled experiences.
 
-- [GitHub](https://github.com)
+Planned (and upcoming) projects include:
 
-
-## Wallets
-  - [MetaMask Browser Extension](https://metamask.io/download)
-  - [Coinbase Browser Extension](https://www.coinbase.com/wallet/downloads)
-
-
-## Testnet Base ETH
-  - [Base Sepolia Testnet Faucet](https://www.alchemy.com/faucets/base-sepolia)
-
-
-## 📚 Recommended Pre-requisite Knowledge
-
-The bootcamp assumes basic understanding of the following concepts. Here are some helpful crash courses to get you started:
-
-- [Command Line](https://www.youtube.com/watch?v=mJ-qvsxPHpY)
-- [Git & GitHub](https://www.youtube.com/watch?v=uwAqEzhyjtw)
-- [TypeScript Programming Language](https://www.youtube.com/watch?v=BCg4U1FzODs)
-- [Solidity in 20 minutes](https://www.youtube.com/watch?v=RQzuQb0dfBM)
-- [Learn How to Use Viem | A TypeScript Interface Framework to Interact with the Ethereum Blockchain](https://www.youtube.com/watch?v=P9oUqVsHBkA)
-
-> Note: If you have found better crash course videos, please submit a change PR so we can take a look at it.  
-> Thank you!
+| Project Name            | Description                                                                 | Status          |
+|-------------------------|-----------------------------------------------------------------------------|------------------|
+| **Onchain Sign-In Demo** | Connect your wallet and gate features behind token/NFT ownership.           | Planned          |
+| **Mint Button UI Kits** | Plug-and-play components to drop mints directly into any frontend.          | Planned          |
+| **Onchain Event RSVP**  | Sign messages to confirm attendance to IRL/URL events.                      | Planned          |
+| **Base Leaderboard**    | Track and display onchain activity with real-time updates.                  | Planned          |
+| **Token-Gated Forms**   | Use ownership or onchain actions as access control for UI flows.            | Planned          |
+| **Portfolio Tracker**   | Visualize wallet holdings and track portfolio value using onchain data.     | In Development   |
 
 
-## 🪟 For Windows Users
 
-While we recommend Linux/MacOS, Windows users can follow these guides to set up a similar dev environment:
+## 🧰 Tech Stack
 
-- [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-- [Set up a WSL development environment](https://learn.microsoft.com/en-us/windows/dev-environment/)
-- [Remote - WSL VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
-
-
-## 🧰 Development Pre-requisites
-
-- **IDE**: [Visual Studio Code](https://code.visualstudio.com/)
-- **Version Control**: `git`
-- **Node Version Manager**:
-  - [nvm for Windows](https://github.com/coreybutler/nvm-windows)
-  - [nvm for Linux/Mac](https://github.com/nvm-sh/nvm)
+- **Vite + React** for snappy frontend builds  
+- **Viem** for wallet connections and contract interactions  
+- **Base's OnchainKit** for secure message signing, minting, and gating  
+- **pnpm** for blazing-fast package management
 
 
-## 🧩 VS Code Extensions (Optional but Helpful)
+## 📦 Getting Started
 
-- [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
-- [Solidity Inspector](https://marketplace.visualstudio.com/items?itemName=PraneshASP.vscode-solidity-inspector)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
-- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+Clone the repo and jump into any project folder to start tinkering:
 
+```bash
+git clone https://github.com/your-org/onchainkit-projects.git
+cd onchainkit-projects/<project-name>
+pnpm install
+pnpm run dev
+```
 
-## 🤝 Contribute
+> Each project includes its own README with setup instructions, key concepts, and implementation notes.
 
-Have suggestions or improvements? Feel free to open an issue or submit a pull request.
+---
 
+## 🤝 Contributing
+
+This repo is built in public — and we welcome your ideas, code, and creativity. Whether you’re fixing a bug, enhancing a demo, or adding a new use case, contributions are always appreciated.
+
+To contribute, just fork this repo, create a branch, and open a pull request.  
+For change requests, clone and submit a PR — we'll review and collaborate from there.
+
+### 💡 Add Your Own OnchainKit Project
+
+Got something cool built with OnchainKit? Add it as a new folder under `/projects`. Include a `README.md` and set a project status (`Planned`, `In Development`, or `Live`).
+
+We’re all about showcasing what’s possible with OnchainKit — so if you build something fun, weird, useful, or bold… PR it.
+
+```vbnet
+Build something onchain. Share it with the world.
+```
