@@ -13,12 +13,12 @@ Planned (and upcoming) projects include:
 
 | Project Name            | Description                                                                 | Status          |
 |-------------------------|-----------------------------------------------------------------------------|------------------|
-| **Onchain Sign-In Demo** | Connect your wallet and gate features behind token/NFT ownership.           | Planned          |
+| **Onchain Sign-In Demo** | Connect your wallet and gate features behind token/NFT ownership.           | In Development   |
 | **Mint Button UI Kits** | Plug-and-play components to drop mints directly into any frontend.          | Planned          |
 | **Onchain Event RSVP**  | Sign messages to confirm attendance to IRL/URL events.                      | Planned          |
 | **Base Leaderboard**    | Track and display onchain activity with real-time updates.                  | Planned          |
 | **Token-Gated Forms**   | Use ownership or onchain actions as access control for UI flows.            | Planned          |
-| **Portfolio Tracker**   | Visualize wallet holdings and track portfolio value using onchain data.     | In Development   |
+| **Portfolio Tracker**   | Visualize wallet holdings and track portfolio value using onchain data.     | Live             |
 
 
 
