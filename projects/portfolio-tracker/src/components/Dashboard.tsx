@@ -11,11 +11,13 @@ interface Asset {
   price: number;
   total: number;
   logo: string;
+  percentage: number;
 }
 
 const Dashboard = () => {
   const { address } = useAccount();
   const [assets, setAssets] = useState<Asset[]>([]);
+  const [totalValue, setTotalValue] = useState(0);
 
   useEffect(() => {
     const fetchPortfolio = async () => {
@@ -31,7 +33,7 @@ const Dashboard = () => {
 
         const tokens = response.portfolios?.[0]?.tokenBalances || [];
 
-        const formattedAssets: Asset[] = tokens
+        const intermediateAssets = tokens
           .filter((token) => token.cryptoBalance && token.decimals != null)
           .map((token) => {
             const amount =
@@ -45,9 +47,18 @@ const Dashboard = () => {
               price,
               total: Number(token.fiatBalance),
               logo: token.image || "/default.png",
+              percentage: 0,
             };
           });
 
+        const total = intermediateAssets.reduce((sum, a) => sum + a.total, 0);
+
+        const formattedAssets = intermediateAssets.map((a) => ({
+          ...a,
+          percentage: total > 0 ? (a.total / total) * 100 : 0,
+        }));
+
+        setTotalValue(total);
         setAssets(formattedAssets);
       } catch (err) {
         console.error("Unexpected error:", err);
@@ -56,8 +67,6 @@ const Dashboard = () => {
 
     fetchPortfolio();
   }, [address]);
-
-  const totalValue = assets.reduce((sum, asset) => sum + asset.total, 0);
 
   return (
     <div className="dashboard-container">
@@ -71,6 +80,7 @@ const Dashboard = () => {
           <span>Amount</span>
           <span>Price</span>
           <span>Total</span>
+          <span>Percentage</span>
         </div>
 
         {assets.map((asset, index) => (
@@ -89,6 +99,7 @@ const Dashboard = () => {
               })}
             </span>
             <span>${asset.total.toFixed(2)}</span>
+            <span className="percentage">{asset.percentage.toFixed(2)}%</span>
           </div>
         ))}
       </div>
