@@ -12,7 +12,7 @@ const wagmiConfig = createConfig({
   chains: [baseSepolia],
   connectors: [
     coinbaseWallet({
-      appName: "onchainkit",
+      appName: "Portfolio Tracker",
     }),
   ],
   ssr: true,
