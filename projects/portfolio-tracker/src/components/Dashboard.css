@@ -1,0 +1,116 @@
+.dashboard-container {
+    flex-grow: 1; /* Expands to fill remaining space */
+    padding: 20px;
+    background: #e8eff7;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw; /* Ensures it fills space after sidebar */
+    max-width: 100vw;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .dashboard-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    width: 60%;
+  }
+  
+  /* Asset Table */
+  .asset-table {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    width: 60%;
+    border: 1px solid #e2e8f0; /* soft border */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .asset-table:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* subtle lift on hover */
+  }
+  
+  /* Table Header & Rows */
+  .table-header{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 12px 10px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: #f1f5f9;
+    font-weight: bold;
+    border-bottom: 2px solid #e2e8f0;
+    border-radius: 8px 8px 0 0;
+  }
+  .table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 12px 10px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: #f1f5f9;
+  }
+  
+  .table-header {
+    font-weight: bold;
+    background-color: #f4f4f4;
+  }
+
+  .header-name {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .table-header span,
+  .table-row span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+  
+  /* Asset Info */
+  .asset-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .asset-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  
+  .asset-name {
+    font-size: 14px;
+  }
+  
+  /* Responsive Grid for Smaller Screens */
+  @media (max-width: 1200px) {
+    .table-header,
+    .table-row {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .table-header,
+    .table-row {
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+  }
+  
+  .wallet-info {
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
