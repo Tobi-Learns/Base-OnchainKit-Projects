@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* margin-top: 20px; */
+  margin-right: 20px;
+  width: 100vw;
+  max-width: 100%; /* Prevents it from exceeding screen width */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.body{
+  background-color: hsl(0, 57%, 24%);
+}
+
+.portfolio-total-card {
+  background: #f5f7fa;
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-total-card h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.portfolio-total-card p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4f46e5;
+}
