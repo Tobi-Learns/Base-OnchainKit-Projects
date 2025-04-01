@@ -8,7 +8,7 @@ import imgurl from "/src/assets/baselogo.png";
 export default function Providers({ children }: { children: ReactNode }) {
   return (
     <OnchainKitProvider
-      apiKey={import.meta.env.VITE_PUBLIC_ONCHAINKIT_API_KEY}
+      apiKey={import.meta.env.ONCHAINKIT_API_KEY}
       chain={base} // add baseSepolia for testing
       config={{
         appearance: {
