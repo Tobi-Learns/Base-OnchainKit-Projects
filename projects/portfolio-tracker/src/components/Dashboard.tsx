@@ -31,6 +31,8 @@ const Dashboard = () => {
           return;
         }
 
+        console.log("Portfolio response:", response); // ← helps a lot
+
         const tokens = response.portfolios?.[0]?.tokenBalances || [];
 
         const intermediateAssets = tokens

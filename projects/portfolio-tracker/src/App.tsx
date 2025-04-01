@@ -2,17 +2,16 @@ import "@coinbase/onchainkit/styles.css";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Dashboard from "./components/Dashboard";
-// import { ReactNode } from 'react';
 import { WagmiProvider, createConfig, http } from "wagmi";
 import { baseSepolia } from "wagmi/chains";
 import { coinbaseWallet } from "wagmi/connectors";
-// import TokenTable from "./components/TokenTable";
+// import { setOnchainKitConfig } from "@coinbase/onchainkit";
 
 const wagmiConfig = createConfig({
   chains: [baseSepolia],
   connectors: [
     coinbaseWallet({
-      appName: "Portfolio Tracker",
+      appName: "onchainkit",
     }),
   ],
   ssr: true,

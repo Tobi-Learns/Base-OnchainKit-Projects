@@ -4,11 +4,16 @@ import type { ReactNode } from "react";
 import { OnchainKitProvider } from "@coinbase/onchainkit";
 import { base } from "wagmi/chains";
 import imgurl from "/src/assets/baselogo.png";
+import { setOnchainKitConfig } from "@coinbase/onchainkit";
+
+setOnchainKitConfig({
+  apiKey: import.meta.env.BASE_ONCHAINKIT_API_URL,
+});
 
 export default function Providers({ children }: { children: ReactNode }) {
   return (
     <OnchainKitProvider
-      apiKey={import.meta.env.ONCHAINKIT_API_KEY}
+      apiKey={import.meta.env.VITE_PUBLIC_ONCHAINKIT_API_KEY}
       chain={base} // add baseSepolia for testing
       config={{
         appearance: {
